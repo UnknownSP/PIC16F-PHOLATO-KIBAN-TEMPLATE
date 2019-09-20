@@ -1,0 +1,1176 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$bin/target.obj
+cinit CODE 0 C C 15 2
+text1 CODE 0 40B 40B 1CB 2
+text2 CODE 0 7E4 7E4 1C 2
+text3 CODE 0 EC8 EC8 16 2
+text4 CODE 0 F57 F57 51 2
+text5 CODE 0 EDE EDE 1B 2
+text6 CODE 0 6CC 6CC B4 2
+text7 CODE 0 F1B F1B 3C 2
+text8 CODE 0 5D6 5D6 F6 2
+text9 CODE 0 EB7 EB7 11 2
+text10 CODE 0 EF9 EF9 22 2
+text11 CODE 0 780 780 64 2
+text13 CODE 0 FA8 FA8 58 2
+maintext CODE 0 21 21 3EA 2
+cstackCOMMON COMMON 1 70 70 A 1
+cstackBANK0 BANK0 1 20 20 21 1
+cstackBANK1 BANK1 1 A0 A0 4A 1
+stringtext1 STRCODE 0 1000 1000 30 2
+stringtext2 STRCODE 0 1030 1030 30 2
+stringtext3 STRCODE 0 1060 1060 8 2
+intentry CODE 0 4 4 6 2
+bssBANK0 BANK0 1 41 41 1B 1
+bssBANK2 BANK2 1 120 120 50 1
+swtext1 CONST 0 800 800 20 2
+swtext2 CONST 0 820 820 20 2
+clrtext CODE 0 EB1 EB1 6 2
+bssCOMMON COMMON 1 7A 7A 2 1
+$/tmp/xcXRNtncu.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 A A 2 2
+config CONFIG 0 8007 8007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 5C-6F 1
+RAM EA-EF 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 5C-6F 1
+BANK1 EA-EF 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 2-3 2
+CONST 840-EB0 2
+CONST 1068-3FFF 2
+ENTRY 2-3 2
+ENTRY 840-EB0 2
+ENTRY 1068-3FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 20F0-23EF 1
+CODE 2-3 2
+CODE 840-EB0 2
+CODE 1068-3FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+COMMON 7C-7D 1
+EEDATA F000-F0FF 2
+STRCODE 2-3 2
+STRCODE 840-EB0 2
+STRCODE 1068-3FFF 2
+STRING 2-3 2
+STRING 840-EB0 2
+STRING 1068-3FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$bin/target.obj
+C cinit CODE >1400:/tmp/xcXFiW7kW
+C cinit CODE >1403:/tmp/xcXFiW7kW
+C cinit CODE >1457:/tmp/xcXFiW7kW
+D cinit CODE >1458:/tmp/xcXFiW7kW
+E cinit CODE >1462:/tmp/xcXFiW7kW
+F cinit CODE >1463:/tmp/xcXFiW7kW
+10 cinit CODE >1464:/tmp/xcXFiW7kW
+11 cinit CODE >1465:/tmp/xcXFiW7kW
+12 cinit CODE >1466:/tmp/xcXFiW7kW
+13 cinit CODE >1467:/tmp/xcXFiW7kW
+16 cinit CODE >1471:/tmp/xcXFiW7kW
+17 cinit CODE >1472:/tmp/xcXFiW7kW
+18 cinit CODE >1473:/tmp/xcXFiW7kW
+19 cinit CODE >1474:/tmp/xcXFiW7kW
+1A cinit CODE >1475:/tmp/xcXFiW7kW
+1B cinit CODE >1476:/tmp/xcXFiW7kW
+1D cinit CODE >1482:/tmp/xcXFiW7kW
+1D cinit CODE >1484:/tmp/xcXFiW7kW
+1E cinit CODE >1485:/tmp/xcXFiW7kW
+1F cinit CODE >1486:/tmp/xcXFiW7kW
+4 intentry CODE >548:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+6 intentry CODE >549:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+8 intentry CODE >550:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+FA8 text13 CODE >181:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FA8 text13 CODE >185:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FAB text13 CODE >186:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FAE text13 CODE >188:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FB0 text13 CODE >190:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FB5 text13 CODE >191:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FBA text13 CODE >192:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FBB text13 CODE >193:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FBC text13 CODE >195:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FC4 text13 CODE >196:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FC8 text13 CODE >197:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FCC text13 CODE >199:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FCD text13 CODE >201:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FCD text13 CODE >203:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FCF text13 CODE >205:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FD3 text13 CODE >206:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FD7 text13 CODE >207:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FE0 text13 CODE >212:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FE0 text13 CODE >214:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FE2 text13 CODE >216:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FEA text13 CODE >217:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FF0 text13 CODE >218:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FF4 text13 CODE >219:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FF6 text13 CODE >220:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FF8 text13 CODE >221:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FF9 text13 CODE >223:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FFB text13 CODE >227:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FFB text13 CODE >230:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+FFE text13 CODE >231:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+780 text11 CODE >62:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+780 text11 CODE >64:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+788 text11 CODE >65:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+78F text11 CODE >67:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+793 text11 CODE >68:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+799 text11 CODE >66:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+79E text11 CODE >71:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7A2 text11 CODE >72:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7AC text11 CODE >73:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7B2 text11 CODE >70:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7B2 text11 CODE >74:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7B7 text11 CODE >76:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7B9 text11 CODE >77:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7BF text11 CODE >75:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7C5 text11 CODE >79:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7C7 text11 CODE >80:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7CD text11 CODE >81:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7CF text11 CODE >82:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7DF text11 CODE >83:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7E2 text11 CODE >84:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+7E3 text11 CODE >86:/opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+EF9 text10 CODE >32:/opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+EF9 text10 CODE >36:/opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+EFB text10 CODE >37:/opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+EFD text10 CODE >38:/opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+F02 text10 CODE >39:/opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+F04 text10 CODE >41:/opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+EB7 text9 CODE >4:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+EB8 text9 CODE >6:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+EB9 text9 CODE >43:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+EBB text9 CODE >44:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+EBF text9 CODE >45:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+EC1 text9 CODE >46:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+EC3 text9 CODE >47:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+EC6 text9 CODE >50:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+5D6 text8 CODE >86:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+5D6 text8 CODE >90:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+5E3 text8 CODE >91:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+5EF text8 CODE >92:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+5FE text8 CODE >93:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+605 text8 CODE >94:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+614 text8 CODE >96:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+618 text8 CODE >97:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+619 text8 CODE >98:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+61A text8 CODE >99:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+61B text8 CODE >100:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+61C text8 CODE >101:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+61D text8 CODE >102:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+623 text8 CODE >103:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+624 text8 CODE >104:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+62A text8 CODE >106:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+62E text8 CODE >110:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+634 text8 CODE >111:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+636 text8 CODE >112:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+641 text8 CODE >114:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+647 text8 CODE >115:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+64B text8 CODE >113:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+650 text8 CODE >117:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+654 text8 CODE >121:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+65A text8 CODE >122:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+65C text8 CODE >123:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+667 text8 CODE >125:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+66D text8 CODE >126:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+671 text8 CODE >124:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+675 text8 CODE >129:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+677 text8 CODE >131:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+67D text8 CODE >132:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+687 text8 CODE >134:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+689 text8 CODE >136:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+68F text8 CODE >137:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+699 text8 CODE >139:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+69A text8 CODE >140:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+6A0 text8 CODE >141:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+6A2 text8 CODE >142:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+6A8 text8 CODE >143:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+6B2 text8 CODE >144:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+6B4 text8 CODE >146:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+F1B text7 CODE >4:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+F1B text7 CODE >6:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+F1E text7 CODE >7:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+F32 text7 CODE >8:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+F34 text7 CODE >9:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+F48 text7 CODE >10:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+F4A text7 CODE >11:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+F4C text7 CODE >12:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+6CC text6 CODE >62:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+6CC text6 CODE >67:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+6DC text6 CODE >68:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+6E3 text6 CODE >69:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+6F2 text6 CODE >70:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+6F9 text6 CODE >71:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+6FE text6 CODE >72:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+70E text6 CODE >73:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+71E text6 CODE >74:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+722 text6 CODE >75:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+723 text6 CODE >77:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+724 text6 CODE >78:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+72A text6 CODE >79:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+730 text6 CODE >134:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+734 text6 CODE >136:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+736 text6 CODE >137:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+73C text6 CODE >138:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+742 text6 CODE >139:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+748 text6 CODE >140:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+74C text6 CODE >143:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+750 text6 CODE >145:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+752 text6 CODE >146:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+758 text6 CODE >147:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+75E text6 CODE >148:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+764 text6 CODE >149:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+768 text6 CODE >156:/opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+EDE text5 CODE >15:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+EDE text5 CODE >43:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+EE0 text5 CODE >45:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+EE2 text5 CODE >46:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+EE6 text5 CODE >47:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+EEB text5 CODE >48:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+EF0 text5 CODE >49:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+EF4 text5 CODE >52:/opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+820 swtext2 CONST >174:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F57 text4 CODE >173:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F57 text4 CODE >174:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F58 text4 CODE >177:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F5F text4 CODE >178:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F60 text4 CODE >181:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F67 text4 CODE >182:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F68 text4 CODE >185:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F6F text4 CODE >186:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F70 text4 CODE >189:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F77 text4 CODE >190:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F78 text4 CODE >193:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F7F text4 CODE >194:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F80 text4 CODE >197:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F87 text4 CODE >198:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F88 text4 CODE >201:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F8F text4 CODE >202:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F90 text4 CODE >205:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F97 text4 CODE >207:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+F98 text4 CODE >174:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+FA7 text4 CODE >208:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+EC8 text3 CODE >32:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+EC9 text3 CODE >50:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ECB text3 CODE >51:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ECD text3 CODE >52:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ECE text3 CODE >53:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ED0 text3 CODE >54:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ED2 text3 CODE >55:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ED4 text3 CODE >56:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ED5 text3 CODE >57:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ED6 text3 CODE >58:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ED7 text3 CODE >59:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+ED9 text3 CODE >60:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+EDA text3 CODE >61:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+EDC text3 CODE >62:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+EDD text3 CODE >64:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+7E4 text2 CODE >147:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7E4 text2 CODE >148:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7E8 text2 CODE >150:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7EB text2 CODE >153:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7EE text2 CODE >154:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7F0 text2 CODE >155:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7F3 text2 CODE >156:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7F5 text2 CODE >157:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7F7 text2 CODE >158:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7F8 text2 CODE >159:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7FA text2 CODE >163:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7FC text2 CODE >170:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7FF text2 CODE >171:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+800 swtext1 CONST >224:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+40B text1 CODE >223:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+40B text1 CODE >224:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+40C text1 CODE >226:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+40F text1 CODE >227:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+411 text1 CODE >228:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+412 text1 CODE >229:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+413 text1 CODE >230:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+414 text1 CODE >231:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+416 text1 CODE >232:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+418 text1 CODE >233:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+41A text1 CODE >234:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+41B text1 CODE >235:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+41D text1 CODE >236:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+41E text1 CODE >237:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+41F text1 CODE >238:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+420 text1 CODE >239:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+422 text1 CODE >240:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+424 text1 CODE >241:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+426 text1 CODE >243:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+427 text1 CODE >246:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+42A text1 CODE >247:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+42C text1 CODE >248:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+42D text1 CODE >249:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+42E text1 CODE >250:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+42F text1 CODE >251:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+431 text1 CODE >252:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+433 text1 CODE >253:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+435 text1 CODE >254:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+436 text1 CODE >255:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+438 text1 CODE >256:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+43A text1 CODE >257:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+43C text1 CODE >258:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+43D text1 CODE >259:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+43E text1 CODE >260:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+440 text1 CODE >261:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+442 text1 CODE >263:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+443 text1 CODE >266:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+446 text1 CODE >267:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+448 text1 CODE >268:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+449 text1 CODE >269:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+44A text1 CODE >270:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+44B text1 CODE >271:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+44D text1 CODE >272:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+44F text1 CODE >273:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+451 text1 CODE >274:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+452 text1 CODE >275:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+454 text1 CODE >276:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+456 text1 CODE >277:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+458 text1 CODE >278:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+459 text1 CODE >279:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+45A text1 CODE >280:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+45C text1 CODE >281:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+45E text1 CODE >283:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+45F text1 CODE >286:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+462 text1 CODE >287:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+464 text1 CODE >288:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+465 text1 CODE >289:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+466 text1 CODE >290:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+467 text1 CODE >291:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+469 text1 CODE >292:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+46B text1 CODE >293:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+46D text1 CODE >294:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+46E text1 CODE >295:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+470 text1 CODE >296:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+472 text1 CODE >297:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+474 text1 CODE >298:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+476 text1 CODE >299:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+478 text1 CODE >300:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+479 text1 CODE >301:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+47A text1 CODE >303:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+47B text1 CODE >306:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+47E text1 CODE >307:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+480 text1 CODE >308:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+481 text1 CODE >309:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+482 text1 CODE >310:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+483 text1 CODE >311:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+485 text1 CODE >312:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+487 text1 CODE >313:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+489 text1 CODE >314:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+48A text1 CODE >315:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+48C text1 CODE >316:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+48E text1 CODE >317:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+490 text1 CODE >318:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+491 text1 CODE >319:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+493 text1 CODE >320:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+495 text1 CODE >321:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+496 text1 CODE >323:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+497 text1 CODE >326:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+49A text1 CODE >327:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+49C text1 CODE >328:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+49D text1 CODE >329:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+49E text1 CODE >330:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+49F text1 CODE >331:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4A1 text1 CODE >332:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4A3 text1 CODE >333:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4A5 text1 CODE >334:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4A6 text1 CODE >335:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4A8 text1 CODE >336:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4AA text1 CODE >337:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4AC text1 CODE >338:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4AD text1 CODE >339:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4AF text1 CODE >340:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4B1 text1 CODE >341:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4B2 text1 CODE >343:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4B3 text1 CODE >346:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4B6 text1 CODE >347:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4B8 text1 CODE >348:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4B9 text1 CODE >349:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4BA text1 CODE >350:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4BB text1 CODE >351:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4BD text1 CODE >352:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4BF text1 CODE >353:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4C1 text1 CODE >354:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4C2 text1 CODE >355:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4C4 text1 CODE >356:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4C5 text1 CODE >357:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4C7 text1 CODE >358:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4C9 text1 CODE >359:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4CA text1 CODE >360:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4CB text1 CODE >361:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4CD text1 CODE >363:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4CE text1 CODE >366:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4D1 text1 CODE >367:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4D3 text1 CODE >368:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4D4 text1 CODE >369:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4D5 text1 CODE >370:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4D6 text1 CODE >371:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4D8 text1 CODE >372:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4DA text1 CODE >373:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4DC text1 CODE >374:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4DD text1 CODE >375:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4DF text1 CODE >376:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4E0 text1 CODE >377:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4E2 text1 CODE >378:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4E4 text1 CODE >379:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4E5 text1 CODE >380:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4E6 text1 CODE >381:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4E8 text1 CODE >383:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4E9 text1 CODE >386:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4EC text1 CODE >387:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4EE text1 CODE >388:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4EF text1 CODE >389:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4F0 text1 CODE >390:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4F1 text1 CODE >391:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4F3 text1 CODE >392:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4F5 text1 CODE >393:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4F7 text1 CODE >394:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4F8 text1 CODE >395:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4FA text1 CODE >396:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4FC text1 CODE >397:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4FE text1 CODE >398:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+500 text1 CODE >399:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+502 text1 CODE >400:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+503 text1 CODE >401:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+504 text1 CODE >403:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+505 text1 CODE >406:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+508 text1 CODE >407:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+50A text1 CODE >408:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+50B text1 CODE >409:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+50C text1 CODE >410:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+50D text1 CODE >411:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+50F text1 CODE >412:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+511 text1 CODE >413:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+513 text1 CODE >414:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+514 text1 CODE >415:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+516 text1 CODE >416:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+517 text1 CODE >417:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+519 text1 CODE >418:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+51B text1 CODE >419:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+51D text1 CODE >420:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+51F text1 CODE >421:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+520 text1 CODE >423:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+521 text1 CODE >426:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+524 text1 CODE >427:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+526 text1 CODE >428:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+527 text1 CODE >429:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+528 text1 CODE >430:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+529 text1 CODE >431:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+52B text1 CODE >432:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+52D text1 CODE >433:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+52F text1 CODE >434:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+530 text1 CODE >435:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+532 text1 CODE >436:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+533 text1 CODE >437:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+534 text1 CODE >438:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+536 text1 CODE >439:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+538 text1 CODE >440:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+53A text1 CODE >441:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+53C text1 CODE >443:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+53D text1 CODE >446:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+540 text1 CODE >447:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+542 text1 CODE >448:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+543 text1 CODE >449:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+544 text1 CODE >450:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+545 text1 CODE >451:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+547 text1 CODE >452:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+549 text1 CODE >453:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+54B text1 CODE >454:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+54C text1 CODE >455:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+54E text1 CODE >456:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+54F text1 CODE >457:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+550 text1 CODE >458:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+552 text1 CODE >459:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+554 text1 CODE >460:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+555 text1 CODE >461:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+557 text1 CODE >463:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+558 text1 CODE >466:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+55B text1 CODE >467:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+55D text1 CODE >468:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+55E text1 CODE >469:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+55F text1 CODE >470:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+560 text1 CODE >471:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+562 text1 CODE >472:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+564 text1 CODE >473:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+566 text1 CODE >474:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+567 text1 CODE >475:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+569 text1 CODE >476:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+56A text1 CODE >477:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+56B text1 CODE >478:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+56C text1 CODE >479:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+56E text1 CODE >480:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+570 text1 CODE >481:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+572 text1 CODE >483:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+573 text1 CODE >486:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+576 text1 CODE >487:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+578 text1 CODE >488:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+579 text1 CODE >489:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+57A text1 CODE >490:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+57B text1 CODE >491:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+57D text1 CODE >492:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+57F text1 CODE >493:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+581 text1 CODE >494:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+582 text1 CODE >495:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+584 text1 CODE >496:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+585 text1 CODE >497:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+586 text1 CODE >498:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+588 text1 CODE >499:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+58A text1 CODE >500:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+58B text1 CODE >501:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+58D text1 CODE >503:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+58E text1 CODE >506:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+591 text1 CODE >507:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+593 text1 CODE >508:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+594 text1 CODE >509:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+595 text1 CODE >510:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+596 text1 CODE >511:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+598 text1 CODE >512:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+59A text1 CODE >513:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+59C text1 CODE >514:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+59D text1 CODE >515:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+59F text1 CODE >516:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5A0 text1 CODE >517:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5A2 text1 CODE >518:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5A4 text1 CODE >519:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5A6 text1 CODE >520:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5A8 text1 CODE >521:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5A9 text1 CODE >523:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5AA text1 CODE >526:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5AD text1 CODE >527:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5AF text1 CODE >528:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5B0 text1 CODE >529:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5B1 text1 CODE >530:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5B2 text1 CODE >531:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5B4 text1 CODE >532:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5B6 text1 CODE >533:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5B8 text1 CODE >534:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5B9 text1 CODE >535:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5BB text1 CODE >536:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5BC text1 CODE >537:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5BD text1 CODE >538:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5BF text1 CODE >539:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5C1 text1 CODE >540:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5C3 text1 CODE >541:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5C5 text1 CODE >544:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5C6 text1 CODE >224:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5D5 text1 CODE >546:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+21 maintext CODE >26:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+21 maintext CODE >29:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+30 maintext CODE >30:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+3E maintext CODE >31:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+40 maintext CODE >32:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+41 maintext CODE >33:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+43 maintext CODE >34:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+47 maintext CODE >36:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+49 maintext CODE >38:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+4C maintext CODE >54:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+5C maintext CODE >55:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+66 maintext CODE >56:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+68 maintext CODE >58:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+6D maintext CODE >59:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+6F maintext CODE >61:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+72 maintext CODE >62:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+74 maintext CODE >63:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+78 maintext CODE >64:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7A maintext CODE >65:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+7E maintext CODE >66:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+80 maintext CODE >68:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+83 maintext CODE >69:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+85 maintext CODE >70:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+89 maintext CODE >71:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+8B maintext CODE >72:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+8F maintext CODE >73:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+91 maintext CODE >75:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+98 maintext CODE >77:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+A0 maintext CODE >78:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+A7 maintext CODE >80:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+B0 maintext CODE >83:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+BC maintext CODE >84:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+C9 maintext CODE >85:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+D8 maintext CODE >86:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+E9 maintext CODE >87:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+FD maintext CODE >88:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+10D maintext CODE >89:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+11D maintext CODE >90:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+12D maintext CODE >91:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+13B maintext CODE >92:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+14B maintext CODE >93:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+15B maintext CODE >94:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+16B maintext CODE >95:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+17A maintext CODE >96:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+18A maintext CODE >97:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+19A maintext CODE >98:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+1AA maintext CODE >100:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+1B5 maintext CODE >101:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+1C2 maintext CODE >102:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+1D1 maintext CODE >103:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+1E2 maintext CODE >104:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+1F6 maintext CODE >105:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+206 maintext CODE >106:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+216 maintext CODE >107:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+226 maintext CODE >108:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+234 maintext CODE >109:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+244 maintext CODE >110:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+254 maintext CODE >111:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+264 maintext CODE >112:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+273 maintext CODE >113:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+283 maintext CODE >114:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+293 maintext CODE >115:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+2A3 maintext CODE >118:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+2A4 maintext CODE >119:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+2A6 maintext CODE >120:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+2CE maintext CODE >121:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+337 maintext CODE >123:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+355 maintext CODE >124:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+368 maintext CODE >125:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+368 maintext CODE >126:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+387 maintext CODE >127:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+39A maintext CODE >128:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+39A maintext CODE >130:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+3B9 maintext CODE >131:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+3C0 maintext CODE >132:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+3E0 maintext CODE >133:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+3E6 maintext CODE >137:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+3E7 maintext CODE >54:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+3F9 maintext CODE >140:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+400 maintext CODE >141:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+407 maintext CODE >142:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+40A maintext CODE >40:/home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+EB1 clrtext CODE >1446:/tmp/xcXFiW7kW
+EB1 clrtext CODE >1447:/tmp/xcXFiW7kW
+EB2 clrtext CODE >1448:/tmp/xcXFiW7kW
+EB2 clrtext CODE >1449:/tmp/xcXFiW7kW
+EB3 clrtext CODE >1450:/tmp/xcXFiW7kW
+EB4 clrtext CODE >1451:/tmp/xcXFiW7kW
+EB5 clrtext CODE >1452:/tmp/xcXFiW7kW
+EB6 clrtext CODE >1453:/tmp/xcXFiW7kW
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 3 0 ABS 0 - bin/target.obj
+_ADJUST_DIF 2000 0 STRCODE 0 stringtext1 bin/target.obj
+_ADJUST_MAG 2060 0 STRCODE 0 stringtext2 bin/target.obj
+__Hspace_0 8009 0 ABS 0 - -
+__Hspace_1 170 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+_led_blink 816 0 CODE 0 text1 bin/target.obj
+___awtoft@sign 25 0 BANK0 1 cstackBANK0 bin/target.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - bin/target.obj
+main@i E8 0 BANK1 1 cstackBANK1 bin/target.obj
+main@j A0 0 BANK1 1 cstackBANK1 bin/target.obj
+__Hstrings 0 0 ABS 0 strings -
+_HAND 8 0 CODE 0 intentry bin/target.obj
+_PEIE 5E 0 ABS 0 - bin/target.obj
+_Rdtp 53 0 BANK0 1 bssBANK0 bin/target.obj
+_Sdtp 7A 0 COMMON 1 bssCOMMON bin/target.obj
+___sp 0 0 STACK 2 stack /tmp/xcXRNtncu.obj
+_init FC8 0 CODE 0 text2 bin/target.obj
+_main 42 0 CODE 0 maintext bin/target.obj
+btemp 7E 0 ABS 0 - bin/target.obj
+___ftadd@f1 30 0 BANK0 1 cstackBANK0 bin/target.obj
+___ftadd@f2 33 0 BANK0 1 cstackBANK0 bin/target.obj
+start 14 0 CODE 0 init /tmp/xcXRNtncu.obj
+__size_of___ftadd 0 0 ABS 0 - bin/target.obj
+__size_of___ftmul 0 0 ABS 0 - bin/target.obj
+__size_of_HAND 0 0 ABS 0 - bin/target.obj
+__size_of_init 0 0 ABS 0 - bin/target.obj
+__size_of_main 0 0 ABS 0 - bin/target.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+?___wmul 72 0 COMMON 1 cstackCOMMON bin/target.obj
+__size_of_I2C_init 0 0 ABS 0 - bin/target.obj
+__Hpowerup 0 0 CODE 0 powerup -
+___ftge@ff1 20 0 BANK0 1 cstackBANK0 bin/target.obj
+___ftge@ff2 23 0 BANK0 1 cstackBANK0 bin/target.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXRNtncu.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXRNtncu.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXRNtncu.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXRNtncu.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXRNtncu.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXRNtncu.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+___bmul@multiplicand 72 0 COMMON 1 cstackCOMMON bin/target.obj
+__end_of_ADJUST_DIF 2060 0 STRCODE 0 stringtext1 bin/target.obj
+__end_of_ADJUST_MAG 20C0 0 STRCODE 0 stringtext2 bin/target.obj
+main@enable1_flag D4 0 BANK1 1 cstackBANK1 bin/target.obj
+wtemp0 7E 0 ABS 0 - bin/target.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+main@enable2_flag D5 0 BANK1 1 cstackBANK1 bin/target.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+___ftmul@f1 20 0 BANK0 1 cstackBANK0 bin/target.obj
+___ftmul@f2 23 0 BANK0 1 cstackBANK0 bin/target.obj
+___wmul@multiplicand 74 0 COMMON 1 cstackCOMMON bin/target.obj
+_ADCON0 9D 0 ABS 0 - bin/target.obj
+_ADCON1 9E 0 ABS 0 - bin/target.obj
+_ADRESH 9C 0 ABS 0 - bin/target.obj
+_ADRESL 9B 0 ABS 0 - bin/target.obj
+main@test_count A2 0 BANK1 1 cstackBANK1 bin/target.obj
+_ANSELA 18C 0 ABS 0 - bin/target.obj
+_ANSELB 18D 0 ABS 0 - bin/target.obj
+adcon_set@num 72 0 COMMON 1 cstackCOMMON bin/target.obj
+__size_of___awtoft 0 0 ABS 0 - bin/target.obj
+_I2C_init 1D90 0 CODE 0 text3 bin/target.obj
+__end_of___bmul 1D90 0 CODE 0 text9 bin/target.obj
+__end_of___ftge 1EAE 0 CODE 0 text7 bin/target.obj
+__end_of___wmul 1DF2 0 CODE 0 text5 bin/target.obj
+__Lmaintext 0 0 ABS 0 maintext -
+__end_of_I2C_init 1DBC 0 CODE 0 text3 bin/target.obj
+___bmul@multiplier 75 0 COMMON 1 cstackCOMMON bin/target.obj
+main@condition D6 0 BANK1 1 cstackBANK1 bin/target.obj
+__size_of___ftpack 0 0 ABS 0 - bin/target.obj
+_rcv_data 54 0 BANK0 1 bssBANK0 bin/target.obj
+__end_of___ftadd D98 0 CODE 0 text8 bin/target.obj
+__end_of___ftmul F00 0 CODE 0 text6 bin/target.obj
+start_initialization 18 0 CODE 0 cinit bin/target.obj
+_snd_data 150 0 BANK2 1 bssBANK2 bin/target.obj
+_OSCCON 99 0 ABS 0 - bin/target.obj
+___awtoft 1DF2 0 CODE 0 text10 bin/target.obj
+_TRISAbits 8C 0 ABS 0 - bin/target.obj
+_TRISCbits 8E 0 ABS 0 - bin/target.obj
+__end_of___awtoft 1E36 0 CODE 0 text10 bin/target.obj
+clear_ram0 1D62 0 CODE 0 clrtext bin/target.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 bin/target.obj
+__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 bin/target.obj
+_SSPADD 212 0 ABS 0 - bin/target.obj
+_SSPBUF 211 0 ABS 0 - bin/target.obj
+_SSPMSK 213 0 ABS 0 - bin/target.obj
+_rcv_flg 7B 0 COMMON 1 bssCOMMON bin/target.obj
+___ftpack F00 0 CODE 0 text11 bin/target.obj
+___ftpack@arg 72 0 COMMON 1 cstackCOMMON bin/target.obj
+___ftpack@exp 75 0 COMMON 1 cstackCOMMON bin/target.obj
+_WDTCON 97 0 ABS 0 - bin/target.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXRNtncu.obj
+__end_of___ftpack FC8 0 CODE 0 text11 bin/target.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 42 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__end_of_Slave_Interrupt 2000 0 CODE 0 text13 bin/target.obj
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__CFG_FOSC$INTOSC 0 0 ABS 0 - bin/target.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit 18 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+___ftadd@exp1 3C 0 BANK0 1 cstackBANK0 bin/target.obj
+___ftadd@exp2 3B 0 BANK0 1 cstackBANK0 bin/target.obj
+___ftadd@sign 3A 0 BANK0 1 cstackBANK0 bin/target.obj
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 14 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 14 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 2000 0 STRCODE 0 stringtext1 bin/target.obj
+__pstringtext2 2060 0 STRCODE 0 stringtext2 bin/target.obj
+__pstringtext3 20C0 0 STRCODE 0 stringtext3 bin/target.obj
+___bmul 1D6E 0 CODE 0 text9 bin/target.obj
+___ftge 1E36 0 CODE 0 text7 bin/target.obj
+___wmul 1DBC 0 CODE 0 text5 bin/target.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+int$flags 7E 0 ABS 0 - bin/target.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_GIE 5F 0 ABS 0 - bin/target.obj
+_RA4 64 0 ABS 0 - bin/target.obj
+_RA5 65 0 ABS 0 - bin/target.obj
+_RA6 66 0 ABS 0 - bin/target.obj
+_RA7 67 0 ABS 0 - bin/target.obj
+_RC0 70 0 ABS 0 - bin/target.obj
+_RC1 71 0 ABS 0 - bin/target.obj
+_RC2 72 0 ABS 0 - bin/target.obj
+_SEN 10B0 0 ABS 0 - bin/target.obj
+__S0 8009 0 ABS 0 - -
+__S1 170 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__CFG_PLLEN$ON 0 0 ABS 0 - bin/target.obj
+_Slave_Interrupt 1F50 0 CODE 0 text13 bin/target.obj
+___awtoft@c 20 0 BANK0 1 cstackBANK0 bin/target.obj
+__CFG_BOREN$ON 0 0 ABS 0 - bin/target.obj
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXRNtncu.obj
+__size_of___bmul 0 0 ABS 0 - bin/target.obj
+__size_of___ftge 0 0 ABS 0 - bin/target.obj
+__size_of___wmul 0 0 ABS 0 - bin/target.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK2 0 0 ABS 0 bssBANK2 -
+__CFG_FCMEN$ON 0 0 ABS 0 - bin/target.obj
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+__Lstringtext3 0 0 ABS 0 stringtext3 -
+?___awtoft 20 0 BANK0 1 cstackBANK0 bin/target.obj
+I2C_init@add 72 0 COMMON 1 cstackCOMMON bin/target.obj
+__ptext10 1DF2 0 CODE 0 text10 bin/target.obj
+__ptext11 F00 0 CODE 0 text11 bin/target.obj
+__ptext13 1F50 0 CODE 0 text13 bin/target.obj
+___ftadd BAC 0 CODE 0 text8 bin/target.obj
+___ftmul D98 0 CODE 0 text6 bin/target.obj
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 42 0 CODE 0 maintext bin/target.obj
+__Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - bin/target.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+?___ftpack 72 0 COMMON 1 cstackCOMMON bin/target.obj
+__CFG_CP$OFF 0 0 ABS 0 - bin/target.obj
+__CFG_IESO$ON 0 0 ABS 0 - bin/target.obj
+___wmul@multiplier 72 0 COMMON 1 cstackCOMMON bin/target.obj
+main@F2637 120 0 BANK2 1 bssBANK2 bin/target.obj
+main@F2639 41 0 BANK0 1 bssBANK0 bin/target.obj
+main@value A4 0 BANK1 1 cstackBANK1 bin/target.obj
+__CFG_VCAPEN$OFF 0 0 ABS 0 - bin/target.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXRNtncu.obj
+stacklo 20F0 0 ABS 0 - /tmp/xcXRNtncu.obj
+led_blink@num 72 0 COMMON 1 cstackCOMMON bin/target.obj
+_ADCON0bits 9D 0 ABS 0 - bin/target.obj
+__CFG_LVP$OFF 0 0 ABS 0 - bin/target.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+___ftmul@cntr 2E 0 BANK0 1 cstackBANK0 bin/target.obj
+__pbssCOMMON 7A 0 COMMON 1 bssCOMMON bin/target.obj
+___ftmul@sign 2F 0 BANK0 1 cstackBANK0 bin/target.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__size_of_Slave_Interrupt 0 0 ABS 0 - bin/target.obj
+__Lend_init 14 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 3A 0 CODE 0 cinit bin/target.obj
+__Hintentry 14 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - bin/target.obj
+__Lstrings 0 0 ABS 0 strings -
+?___ftadd 30 0 BANK0 1 cstackBANK0 bin/target.obj
+?___ftmul 20 0 BANK0 1 cstackBANK0 bin/target.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+main@send_value E6 0 BANK1 1 cstackBANK1 bin/target.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK2 0 0 ABS 0 bssBANK2 -
+_SSPCON1bits 215 0 ABS 0 - bin/target.obj
+_SSPCON2bits 216 0 ABS 0 - bin/target.obj
+__ptext1 816 0 CODE 0 text1 bin/target.obj
+__ptext2 FC8 0 CODE 0 text2 bin/target.obj
+__ptext3 1D90 0 CODE 0 text3 bin/target.obj
+__ptext4 1EAE 0 CODE 0 text4 bin/target.obj
+__ptext5 1DBC 0 CODE 0 text5 bin/target.obj
+__ptext6 D98 0 CODE 0 text6 bin/target.obj
+__ptext7 1E36 0 CODE 0 text7 bin/target.obj
+__ptext8 BAC 0 CODE 0 text8 bin/target.obj
+__ptext9 1D6E 0 CODE 0 text9 bin/target.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+__Hstringtext3 0 0 ABS 0 stringtext3 -
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - bin/target.obj
+__CFG_WDTE$ON 0 0 ABS 0 - bin/target.obj
+___ftmul@exp 2A 0 BANK0 1 cstackBANK0 bin/target.obj
+__end_of__initialization 3A 0 CODE 0 cinit bin/target.obj
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+___ftpack@sign 76 0 COMMON 1 cstackCOMMON bin/target.obj
+led_blink@state 74 0 COMMON 1 cstackCOMMON bin/target.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - bin/target.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON bin/target.obj
+init@addr 74 0 COMMON 1 cstackCOMMON bin/target.obj
+__end_of_adcon_set 1F50 0 CODE 0 text4 bin/target.obj
+_SSPCON1 215 0 ABS 0 - bin/target.obj
+_SSPSTAT 214 0 ABS 0 - bin/target.obj
+__Hend_init 18 0 CODE 0 end_init -
+__size_of_adcon_set 0 0 ABS 0 - bin/target.obj
+__end_of_HAND 14 0 CODE 0 intentry bin/target.obj
+__end_of_init 1000 0 CODE 0 text2 bin/target.obj
+__end_of_main 816 0 CODE 0 maintext bin/target.obj
+_BCLIE 493 0 ABS 0 - bin/target.obj
+_BCLIF 93 0 ABS 0 - bin/target.obj
+__end_of_adcon 20D0 0 STRCODE 0 stringtext3 bin/target.obj
+_SSPIE 48B 0 ABS 0 - bin/target.obj
+_SSPIF 8B 0 ABS 0 - bin/target.obj
+_TRISA 8C 0 ABS 0 - bin/target.obj
+_TRISB 8D 0 ABS 0 - bin/target.obj
+_TRISC 8E 0 ABS 0 - bin/target.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_adcon 20C0 0 STRCODE 0 stringtext3 bin/target.obj
+__CFG_CPD$OFF 0 0 ABS 0 - bin/target.obj
+_SSPSTATbits 214 0 ABS 0 - bin/target.obj
+__pintentry 8 0 CODE 0 intentry bin/target.obj
+_adcon_set 1EAE 0 CODE 0 text4 bin/target.obj
+__initialization 18 0 CODE 0 cinit bin/target.obj
+___bmul@product 74 0 COMMON 1 cstackCOMMON bin/target.obj
+__pbssBANK0 41 0 BANK0 1 bssBANK0 bin/target.obj
+__pbssBANK2 120 0 BANK2 1 bssBANK2 bin/target.obj
+__CFG_WRT$OFF 0 0 ABS 0 - bin/target.obj
+__end_of_led_blink BAC 0 CODE 0 text1 bin/target.obj
+___wmul@product 76 0 COMMON 1 cstackCOMMON bin/target.obj
+__size_of_led_blink 0 0 ABS 0 - bin/target.obj
+Slave_Interrupt@x 71 0 COMMON 1 cstackCOMMON bin/target.obj
+__pswtext1 1000 0 CONST 0 swtext1 bin/target.obj
+__pswtext2 1040 0 CONST 0 swtext2 bin/target.obj
+___ftmul@f3_as_product 2B 0 BANK0 1 cstackBANK0 bin/target.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text3 0 EC8 1D90 16 2
+text4 0 F57 1EAE 51 2
+text5 0 EDE 1DBC 1B 2
+text7 0 F1B 1E36 3C 2
+text9 0 EB7 1D6E 11 2
+text10 0 EF9 1DF2 22 2
+text13 0 FA8 1F50 58 2
+cstackCOMMON 1 70 70 C 1
+cstackBANK0 1 20 20 3C 1
+cstackBANK1 1 A0 A0 4A 1
+stringtext1 0 1000 2000 68 2
+intentry 0 4 8 7FC 2
+reset_vec 0 0 0 2 2
+bssBANK2 1 120 120 50 1
+swtext1 0 800 1000 40 2
+clrtext 0 EB1 1D62 6 2
+config 0 8007 1000E 2 2

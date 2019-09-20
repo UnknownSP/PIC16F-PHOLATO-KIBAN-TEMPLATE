@@ -1,0 +1,333 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1938 ]
+[d frameptr 6 ]
+"32 /opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 /opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 /opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 /opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 /opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 /opt/microchip/xc8/v2.00/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"32 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+[v _I2C_init I2C_init `(v  1 e 1 0 ]
+"181
+[v _Slave_Interrupt Slave_Interrupt `(v  1 e 1 0 ]
+"26 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+[v _main main `(v  1 e 1 0 ]
+"147
+[v _init init `(v  1 e 1 0 ]
+"173
+[v _adcon_set adcon_set `(v  1 e 1 0 ]
+"223
+[v _led_blink led_blink `(v  1 e 1 0 ]
+"548
+[v _HAND HAND `II(v  1 e 1 0 ]
+"1228 /opt/microchip/xc8/v2.00/pic/include/pic16f1938.h
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+[s S108 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1245
+[u S117 . 1 `S108 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES117  1 e 1 @140 ]
+"1290
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1352
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S129 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1369
+[u S138 . 1 `S129 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES138  1 e 1 @142 ]
+"1734
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1851
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1992
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"2012
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"2032
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S45 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+"2061
+[s S53 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S57 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S60 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[u S63 . 1 `S45 1 . 1 0 `S53 1 . 1 0 `S57 1 . 1 0 `S60 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES63  1 e 1 @157 ]
+"2121
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"3077
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3135
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3793
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"3813
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3833
+[v _SSPMSK SSPMSK `VEuc  1 e 1 @531 ]
+"3853
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S229 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3870
+[u S238 . 1 `S229 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES238  1 e 1 @532 ]
+"3915
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S251 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3937
+[u S260 . 1 `S251 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES260  1 e 1 @533 ]
+[s S272 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4054
+[u S281 . 1 `S272 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES281  1 e 1 @534 ]
+"7228
+[v _BCLIE BCLIE `VEb  1 e 0 @1171 ]
+"7231
+[v _BCLIF BCLIF `VEb  1 e 0 @147 ]
+"7693
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"8077
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"8146
+[v _RA4 RA4 `VEb  1 e 0 @100 ]
+"8149
+[v _RA5 RA5 `VEb  1 e 0 @101 ]
+"8152
+[v _RA6 RA6 `VEb  1 e 0 @102 ]
+"8155
+[v _RA7 RA7 `VEb  1 e 0 @103 ]
+"8182
+[v _RC0 RC0 `VEb  1 e 0 @112 ]
+"8185
+[v _RC1 RC1 `VEb  1 e 0 @113 ]
+"8188
+[v _RC2 RC2 `VEb  1 e 0 @114 ]
+"8497
+[v _SEN SEN `VEb  1 e 0 @4272 ]
+"8572
+[v _SSPIE SSPIE `VEb  1 e 0 @1163 ]
+"8575
+[v _SSPIF SSPIF `VEb  1 e 0 @139 ]
+"23 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Inc/I2C.h
+[v _rcv_data rcv_data `[8]uc  1 e 8 0 ]
+"24
+[v _snd_data snd_data `[32]uc  1 e 32 0 ]
+"15 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+[v _rcv_flg rcv_flg `c  1 e 1 0 ]
+"16
+[v _Sdtp Sdtp `*.5uc  1 e 1 0 ]
+"17
+[v _Rdtp Rdtp `*.4uc  1 e 1 0 ]
+"18 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+[v _ADJUST_MAG ADJUST_MAG `DC[16]d  1 e 48 0 ]
+"20
+[v _ADJUST_DIF ADJUST_DIF `DC[16]d  1 e 48 0 ]
+"22
+[v _adcon adcon `DC[8]uc  1 e 8 0 ]
+"26
+[v _main main `(v  1 e 1 0 ]
+{
+"28
+[v main@value value `[16]d  1 a 48 4 ]
+"30
+[v main@condition condition `[16]uc  1 a 16 54 ]
+"34
+[v main@i i `i  1 a 2 72 ]
+"33
+[v main@send_value send_value `ui  1 a 2 70 ]
+"36
+[v main@test_count test_count `i  1 a 2 2 ]
+"34
+[v main@j j `i  1 a 2 0 ]
+"32
+[v main@enable2_flag enable2_flag `uc  1 a 1 53 ]
+"31
+[v main@enable1_flag enable1_flag `uc  1 a 1 52 ]
+"26
+[v main@F2637 F2637 `[16]d  1 s 48 F2637 ]
+"29
+[v main@F2639 F2639 `[16]uc  1 s 16 F2639 ]
+"145
+} 0
+"223
+[v _led_blink led_blink `(v  1 e 1 0 ]
+{
+[v led_blink@num num `i  1 p 2 2 ]
+[v led_blink@state state `uc  1 p 1 4 ]
+"546
+} 0
+"147
+[v _init init `(v  1 e 1 0 ]
+{
+"148
+[v init@addr addr `uc  1 a 1 4 ]
+"171
+} 0
+"32 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+[v _I2C_init I2C_init `(v  1 e 1 0 ]
+{
+[v I2C_init@add add `uc  1 a 1 wreg ]
+[v I2C_init@add add `uc  1 a 1 wreg ]
+"50
+[v I2C_init@add add `uc  1 a 1 2 ]
+"64
+} 0
+"173 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+[v _adcon_set adcon_set `(v  1 e 1 0 ]
+{
+[v adcon_set@num num `i  1 p 2 2 ]
+"208
+} 0
+"15 /opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 6 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
+"53
+} 0
+"62 /opt/microchip/xc8/v2.00/pic/sources/c90/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"4 /opt/microchip/xc8/v2.00/pic/sources/c90/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"86 /opt/microchip/xc8/v2.00/pic/sources/c90/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 28 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 27 ]
+[v ___ftadd@sign sign `uc  1 a 1 26 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 16 ]
+[v ___ftadd@f2 f2 `f  1 p 3 19 ]
+"148
+} 0
+"4 /opt/microchip/xc8/v2.00/pic/sources/c90/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 4 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 2 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 5 ]
+"51
+} 0
+"32 /opt/microchip/xc8/v2.00/pic/sources/c90/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 5 ]
+"32
+[v ___awtoft@c c `i  1 p 2 0 ]
+"42
+} 0
+"62 /opt/microchip/xc8/v2.00/pic/sources/c90/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 2 ]
+[v ___ftpack@exp exp `uc  1 p 1 5 ]
+[v ___ftpack@sign sign `uc  1 p 1 6 ]
+"86
+} 0
+"548 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/main.c
+[v _HAND HAND `II(v  1 e 1 0 ]
+{
+"550
+} 0
+"181 /home/unknown/pic16f-PHOTO-KIBAN-2019-v1/Src/I2C.c
+[v _Slave_Interrupt Slave_Interrupt `(v  1 e 1 0 ]
+{
+"182
+[v Slave_Interrupt@x x `uc  1 a 1 1 ]
+"233
+} 0
